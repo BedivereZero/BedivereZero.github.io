@@ -9,8 +9,6 @@ categories: kubernetes mysql
 
 MySQL 使用不安全的默认配置，仅关心 Kubernetes 运行有状态服务的一般场景。
 
-[TOC]
-
 # 目标
 
 - 使用 `StatefulSet` 部署多副本的 MySQL
