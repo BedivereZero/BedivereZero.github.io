@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '运行一个有状态应用 MySQL'
-date: 2018-12-07 18:33:15 +0800
+date: 2018-12-26 14:12:19 +0800
 categories: kubernetes mysql
 ---
 
