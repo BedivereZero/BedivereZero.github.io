@@ -9,18 +9,18 @@ categories: kubernetes mysql
 
 MySQL 使用不安全的默认配置，仅关心 Kubernetes 运行有状态服务的一般场景。
 
-## 目标
+# 目标
 
 - 使用 `StatefulSet` 部署多副本的 MySQL
 - 测试客户端连接
 - 修改副本数量
 
-## 开始之前
+# 开始之前
 
 - 需要有一个 Kubernetes 集群
 - 需要有一个动态 `PersistentVolume` 配置器，提供持久化存储以满足 `PersistentVolumeClaim`。如果没有则需要手工创建 `PersistentVolume`。
 
-## 部署MySQL
+# 部署MySQL
 
 这个用例中包括一个 `ConfigMap`，两个 `Service`，一个 `StatefulSet`。
 
@@ -57,7 +57,7 @@ ConfigMap 并不对不同的 Pod 做不同的配置，每个 Pod 根据 Stateful
 ## Service
 
 ```yaml
-## Headless service for stable DNS entries of StatefulSet members.
+# Headless service for stable DNS entries of StatefulSet members.
 apiVersion: v1
 kind: Service
 metadata:
@@ -72,8 +72,8 @@ spec:
   selector:
     app: mysql
 ---
-## Client service for connecting to any MySQL instance for reads.
-## For writes, you must instead connect to the master: mysql-0.mysql.
+# Client service for connecting to any MySQL instance for reads.
+# For writes, you must instead connect to the master: mysql-0.mysql.
 apiVersion: v1
 kind: Service
 metadata:
@@ -334,13 +334,13 @@ kubectl apply -f mysql-pv.yaml
 - ReadOnlyMany - 以只读模式挂载给许多节点
 - ReadWriteMany - 以读写模式挂载给许多节点
 
-## 了解有状态Pod初始化
+# 了解有状态Pod初始化
 
 StatefulSet 控制器顺序启动 Pod，当一个 Pod 为 Ready 状态后再启动下一个。
 
 控制器给每个 Pod 分配一个固定的名称 `<statefulset-name>-<ordinal-index>`，例如 `mysql-0`，`mysql-1`
 
-## 测试客户端连接
+# 测试客户端连接
 
 测试写入
 
@@ -367,7 +367,7 @@ kubectl run mysql-client-loop --image=mysql:5.7 -i -t --rm --restart=Never --\
   bash -ic "while sleep 1; do mysql -h mysql-read -e 'SELECT @@server_id,NOW()'; done"
 ```
 
-## 修改副本数量
+# 修改副本数量
 
 修改副本数至 5：
 
@@ -388,7 +388,7 @@ kubectl scale statefulset mysql  --replicas=5
 kubectl applyt -f mysql-statefulset.yaml
 ```
 
-## 清理
+# 清理
 
 - 删除 StatefulSet，会同时删除由 StatefulSet 生成的 Pod
 - 删除 Service
