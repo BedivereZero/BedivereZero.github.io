@@ -51,3 +51,5 @@ plugins:
  - jekyll-seo-tag
 
 google_analytics: UA-131433400-1
+
+show_excerpts: true
