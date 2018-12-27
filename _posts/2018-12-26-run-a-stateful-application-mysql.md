@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '运行一个有状态应用 MySQL'
-date: 2018-12-26 14:12:19 +0800
+date: 2018-12-27 13:32:29 +0800
 categories: kubernetes mysql
 ---
 
@@ -409,3 +409,7 @@ kubectl delete -f mysql-services.yaml
 kubectl delete -f mysql-pv.yaml
 kubectl delete -f mysql-configmap.yaml
 ```
+
+# 参考文档
+
+- [Run a Replicated Stateful Application](https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application)
