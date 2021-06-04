@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 'Ubuntu 下 "门" 和 "复" 显示错误'
-date: 2020-10-21T11:54:45Z
 date: 2021-06-04T10:48:44+08:00
 categories: ubuntu
 ---
