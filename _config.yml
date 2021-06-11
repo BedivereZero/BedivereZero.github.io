@@ -48,6 +48,6 @@ plugins:
  - jekyll-feed
  - jekyll-seo-tag
 
-google_analytics: UA-131433400-1
+google_analytics: UA-131356353-1
 
 show_excerpts: true
