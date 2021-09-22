@@ -9,11 +9,11 @@ categories: vscode
 
 默认配置：
 
-![default](../assets/Screenshot%20from%202021-09-22%2014-29-17.png)
+![default](https://BedivereZero.github.io/assets/Screenshot%20from%202021-09-22%2014-29-17.png)
 
 修改后的配置：
 
-![modified](../assets/Screenshot%20from%202021-09-22%2014-34-18.png)
+![modified](https://BedivereZero.github.io/assets/Screenshot%20from%202021-09-22%2014-34-18.png)
 
 涉及的配置项
 
