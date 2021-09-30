@@ -9,6 +9,8 @@ categories: docker
 
 至于安全性，有证书保证应该没有问题。
 
+腾讯云上可以使用内网的镜像 `https://mirror.ccs.tencentyun.com`
+
 # 修改 Docker 配置文件
 
 操作系统是 `CentOS 7.4.1708`
