@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "twitter_username:"
   这里是豚的个人博客，工作，日记都可能有
 
 # social links
-twitter_username: BedivereZero
+# twitter_username: jekyll
 github_username:  BedivereZero
 rss: RSS
 # dribbble_username: jekyll
