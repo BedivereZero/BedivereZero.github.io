@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python SSH Library Fabirc
-date: 2022-03-03T21dat:46:51+08:00
+date: 2022-03-03T21:46:51+08:00
 categories: python ssh
 ---
 
